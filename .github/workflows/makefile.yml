@@ -67,5 +67,11 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
-        files: math.pdf inf.pdf full.pdf math.epub inf.epub full.epub
+        files: |
+          math.pdf
+          inf.pdf
+          full.pdf
+          math.epub
+          inf.epub
+          full.epub
         tag_name: ${{ steps.generate_release_tag.outputs.release_tag }}
