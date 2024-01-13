@@ -21,22 +21,20 @@ jobs:
           scheme-basic
           hyperref
           collection-langcyrillic
+          graphics
+          tools
+          amscls
           latexmk
           tex4ht
+          appendix
           csquotes
           titlesec
           multirow
-          multicol
-          indentfirst
-          tabularx
           mathtools
           amsfonts
-          amsthm
           gensymb
-          graphicx
           todonotes
           adjustbox
-          enumerate
           enumitem
           capt-of
           titling
