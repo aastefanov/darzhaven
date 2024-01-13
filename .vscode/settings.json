@@ -14,5 +14,6 @@
 		"**/*.html": true,
 		"**/*.css": true,
 		"**/*.tmp": true
-	}
+	},
+	"latex-workshop.latex.autoBuild.run": "never"
 }
