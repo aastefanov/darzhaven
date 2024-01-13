@@ -1,9 +1,11 @@
 \theoremstyle{definition}
-\newtheorem{definition}{Дефиниция}[section]
+\newtheorem{definition}{Дефиниция}[chapter]
 \newtheorem{axiom}[definition]{Аксиома}
 
-\newtheorem{thm}[Теорема]{Свойство}
-\newtheorem{lem}[definition]{Твърдение}
+\newtheorem{theorem}{Теорема}[chapter]
+\newtheorem{lemma}[theorem]{Лема}
+\newtheorem{lem}[theorem]{Твърдение}
+\newtheorem{corollary}[theorem]{Следствие}
 
 \theoremstyle{remark}
 \newtheorem*{example}{Пример}

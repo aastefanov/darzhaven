@@ -1,1 +1,77 @@
 % Комплексни числа. Алгебричен и тригонометричен вид на комплексно число. Формули на Моавър и n-ти корени на единицата.
+\section{Копмлексни числа}
+
+\begin{definition}[Множество на комплексните числа]
+    \[\Cpx = \left\{ x + iy \mid x,\,y \in \R,\, i^2 = -1 \right\}\]
+
+    Елементите на $\Cpx$ наричаме комплексни числа.
+\end{definition}
+
+\begin{theorem}
+    Нека $x = a+ib,\, y = c+id,\, z = f+ig \in \Cpx$. Тогава:
+    \begin{enumerate}
+        \item $x + y = y + x = (a+c) + i(b+d)$
+        \item $xy = yx = (ac - bd) + i(ad + bc)$
+        \item $x(y + z) = xy + xz$
+    \end{enumerate}
+
+    \todo[inline]{Третото условие да се доразпише}
+    \begin{proof}
+        Нека $x, y, z \in \Cpx$. Тогава:
+        \begin{enumerate}
+            \item $x + y = a + ib + c + id = (a + c) + i(b + d)$
+            \item $xy = (a+ic)(b+id) = ab + iad + ibc + i^2cd = (ab - cd) + i(ad + bc)$
+            \item $x(y + z) = (a + ib)(c + f + id + ig) = ...$
+        \end{enumerate}
+    \end{proof}
+\end{theorem}
+
+\begin{definition}[Алгебричен и тригонометричен вид на комплексно число]
+    Числото $x \in \Cpx$ е записано в тригонометричен вид, ако има вида:
+    \[x = r(\cos\varphi + i\sin\varphi),\, r \in \R^, r \geq 0, \varphi \in \left[0,2\pi\right)\]
+\end{definition}
+
+\begin{lem}
+    Нека $x = a+ib$. Тогава то може да се запише в тригонометричен вид.
+    \begin{proof}
+        \begin{align*}
+            x &= a + ib \\
+            x &= 
+        \end{align*}
+    \end{proof}
+    \todo[inline]{Разписано от учебника}
+\end{lem}
+
+\section{Формули на Моавър. Корени на единицата}
+
+\begin{definition}[Формули на Моавър]
+    Нека $z = r(\cos\varphi + i\sin\varphi) \in \Cpx$. Тогава са в сила:
+    \begin{itemize}
+        \item Формула на Моавър за степенуване:
+            \[z^n = r^n\left(\sin{nx} + i\cos{nx}\right)\]
+        
+        \item Формула на Моавър за коренуване:
+            \[z^{-n} = \sqrt[n]{r}\left(\cos\dfrac{x+k\pi}{n} + i\sin\dfrac{x+k\pi}{n}\right),\, k = \overline{0,n-1}\]
+    \end{itemize}
+\end{definition}
+
+\begin{definition}[$n$-ти корени на единицата]
+    Числата $z \in \Cpx$, за които $z^n = 1$ се наричат $n$-ти корени на единицата.
+\end{definition}
+
+\begin{corollary}
+    $n$-тите корени на единицата са точно $n$ на брой и имат вида
+    \[\omega_k = \cos\frac{k\pi}{n} + i\sin\frac{k\pi}{n},\, k = \overline{0,n-1}\]
+    \begin{proof}
+        \todo[inline]{Трябва ли да се доказва?}
+%        Директно следствие от  формула на Моавър:
+    \end{proof}
+\end{corollary}
+
+\begin{corollary}
+    Ако $\omega_k$ е $k$-ти корен на единицата, то $\omega_k = \omega_1^k$.
+    \begin{proof}
+        Директно следствие от втората формула на Моавър:
+        \[\omega_1^k = \cos\frac{k\pi}{n} + i\sin\frac{k\pi}{n} = \omega_k\] 
+    \end{proof}
+\end{corollary}
