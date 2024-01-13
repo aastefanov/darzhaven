@@ -1,0 +1,18 @@
+{
+	"files.exclude": {
+		"**/*.out": true,
+		"**/*.toc": true,
+		"**/*.xref": true,
+		"**/*.4ct": true,
+		"**/*.4tc": true,
+		"**/*.aux": true,
+		"**/*.fdb_latexmk": true,
+		"**/*.dvi": true,
+		"**/*.lg": true,
+		"**/*.fls": true,
+		"**/*.idv": true,
+		"**/*.html": true,
+		"**/*.css": true,
+		"**/*.tmp": true
+	}
+}
