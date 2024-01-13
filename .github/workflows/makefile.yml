@@ -30,9 +30,7 @@ jobs:
           indentfirst
           tabularx
           mathtools
-          amssymb
           amsfonts
-          textcomp
           amsthm
           gensymb
           graphicx
