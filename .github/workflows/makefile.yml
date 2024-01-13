@@ -25,6 +25,24 @@ jobs:
           tex4ht
           csquotes
           titlesec
+          multirow
+          multicol
+          indentfirst
+          tabularx
+          mathtools
+          amssymb
+          amsfonts
+          textcomp
+          amsthm
+          gensymb
+          graphicx
+          todonotes
+          adjustbox
+          enumerate
+          enumitem
+          capt-of
+          titling
+          import
 
     - name: Install calibre
       uses: awalsh128/cache-apt-pkgs-action@latest
