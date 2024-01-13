@@ -6,7 +6,7 @@ all: ../full.pdf ../full.epub
 
 
 ../full.epub: ../full.pdf
-	mk4ht htlatex full.tex 'xhtml,charset=utf-8,pfullml' ' -cunihtf -utf8 -cvalidate'
+	mk4ht htlatex full.tex 'xhtml,charset=utf-8,pmathml,pic-m,pic-equation,svg' ' -cunihtf -utf8 -cvalidate'
 	ebook-convert full.html ../full.epub  --language bg --no-default-epub-cover
 
 

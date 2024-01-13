@@ -5,7 +5,7 @@ all: ../math.pdf ../math.epub
 	-mv ./math.pdf ../
 
 ../math.epub: ../math.pdf
-	mk4ht htlatex math.tex 'xhtml,charset=utf-8,pmathml' ' -cunihtf -utf8 -cvalidate'
+	mk4ht htlatex math.tex 'xhtml,charset=utf-8,pmathml,pic-m,pic-equation,svg' ' -cunihtf -utf8 -cvalidate'
 	ebook-convert math.html ../math.epub  --language bg --no-default-epub-cover
 
 clean:
