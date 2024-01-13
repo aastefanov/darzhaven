@@ -23,6 +23,7 @@ jobs:
           collection-langcyrillic
           latexmk
           tex4ht
+          csquotes
 
     - name: Install calibre
       uses: awalsh128/cache-apt-pkgs-action@latest
