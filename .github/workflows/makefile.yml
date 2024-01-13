@@ -24,6 +24,7 @@ jobs:
           latexmk
           tex4ht
           csquotes
+          titlesec
 
     - name: Install calibre
       uses: awalsh128/cache-apt-pkgs-action@latest
