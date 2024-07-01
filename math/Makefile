@@ -1,4 +1,4 @@
-all: ../math.pdf ../math.epub
+all: ../math.pdf
 
 ../math.pdf: $(wildcard *.tex chapters/*.tex ../common/*.tex)
 	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make math.tex

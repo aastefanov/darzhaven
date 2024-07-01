@@ -1,4 +1,4 @@
-all: ../full.pdf ../full.epub
+all: ../full.pdf
 
 ../full.pdf: $(wildcard ../inf/*.tex ../inf/chapters/*.tex ../math/*.tex ../math/chapters/*.tex ../common/*.tex *.tex)
 	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make full.tex

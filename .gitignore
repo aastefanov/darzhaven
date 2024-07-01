@@ -304,7 +304,7 @@ TSWLatexianTemp*
 # More output files
 *.epub
 *.html
-/*.pdf
+*.pdf
 *.css
 *.tmp
 *x.svg

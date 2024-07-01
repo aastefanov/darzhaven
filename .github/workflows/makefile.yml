@@ -42,11 +42,13 @@ jobs:
           capt-of
           titling
           import
+          sectsty
+          geometry
 
-    - name: Install calibre
-      uses: awalsh128/cache-apt-pkgs-action@latest
-      with:
-        packages: calibre
+    # - name: Install calibre
+    #   uses: awalsh128/cache-apt-pkgs-action@latest
+    #   with:
+    #     packages: calibre
           
 
     - name: Create PDF/epub files
@@ -74,7 +76,7 @@ jobs:
           math.pdf
           inf.pdf
           full.pdf
-          math.epub
-          inf.epub
-          full.epub
+          # math.epub
+          # inf.epub
+          # full.epub
         tag_name: ${{ steps.generate_release_tag.outputs.release_tag }}

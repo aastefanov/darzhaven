@@ -1,4 +1,4 @@
-all: ../inf.pdf ../inf.epub
+all: ../inf.pdf
 
 ../inf.pdf: $(wildcard *.tex chapters/*.tex ../common/*.tex)
 	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make inf.tex
