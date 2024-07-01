@@ -1,1 +1,102 @@
 % Определен интеграл. Дефиниция и свойства. Интегруемост на непрекъснатите функции. Теорема на Нютон-Лайбниц.
+
+Можем да дефинираме определения интеграл по два начина -- чрез суми на Дарбу или суми на Риман.
+
+\section{Дефиниране на определения интеграл}
+
+\subsection{Дефиниция -- чрез суми на Дарбу}
+\begin{definition}[Суми на Дарбу]
+    Нека $f: [a,b] \to \R$ -- ограничена и $\left\{x_i\right\}_0^{n}$ -- разбиване на $[a,b]$.
+
+    За всяко разбиване, нека:
+
+    \[m_i = \sup_{x \in [x_i,x_{i+1}]} f(x),\, M_i = \inf_{x \in [x_i,x_{i+1}]} f(x),\,\Delta{x_i} = x_{i+1} - x_i\]
+
+    Тогава дефинираме малка и голяма сума на Дарбу съответно като:
+    \[s = \sum_{i=0}^n M_i \Delta x_i\]
+    \[S = \sum_{i=0}^n m_i\Delta x_i\]
+\end{definition}
+
+\begin{theorem}
+    При добавяне на нови точки в разбиването, голямата сума на Дарбу намалява, а малката нараства.
+
+    \begin{proof}
+        Да добавим точка $x'$ между $x_{i_0}$ и $x_{i_0+1}$.
+
+        Знаем, че $f$ e ограничена, тогава:
+        \begin{align*}
+            m_1' & = \inf_{x\in[x_{i_0},x']} f(x)   \geq m_{i_0}   &
+            m_2' & = \inf_{x\in[x_{i_0},x']} f(x)   \geq m_{i_0+1}   \\
+            M_1' & = \sup_{x\in[x',x_{i_0}+1]} f(x) \leq M_{i_0}   &
+            M_2' & = \sup_{x\in[x',x_{i_0}+1]} f(x) \leq M_{i_0+1}
+        \end{align*}
+
+        За това разбиване сумите на Дарбу са:
+        \begin{alignat*}{3}
+            s' & = \sum_{i\neq i_0}m_i\Delta x_i + m_1'(x'-x_{i_0}) + m_2' (x_{i_0+1}-x') & \geq s
+            S' & = \sum_{i\neq i_0}M_i\Delta x_i + M_1'(x'-x_{i_0}) + M_2' (x_{i_0+1}-x') & \leq S
+        \end{alignat*}
+
+        Получихме $s \leq s' \leq S' \leq S$.
+    \end{proof}
+\end{theorem}
+
+\begin{definition}[Долен и горен интеграл на Дарбу]
+    Долен и горен интеграл на Дарбу дефинираме съответно като:
+    \begin{align*}
+        \underline{I} & = \lim_{\Delta{x} \to 0} s \\
+        \overline{I}  & = \lim_{\Delta{x} \to 0} S
+    \end{align*}
+
+\end{definition}
+
+\begin{definition}[Определен интеграл в смисъла на Дарбу]
+    $f: [a,b] \to \R$ е интегруема в смисъл на Дарбу, ако $\underline{I} = \overline{I}$.
+
+    Означаваме:
+    \[\underline{I} = \overline{I} = I = \int_{a}^b f(x)\,dx\]
+\end{definition}
+
+\begin{theorem}[НДУ за интегруемост в смисъл на Дарбу]
+    Функцията $f: [a,b] \to \R$ е интегруема в смисъл на Дарбу тогава и само тогава, когато
+    \[\forall \varepsilon > 0 \exists\left\{[x,x']\right\} \subset [a,b] : S-s < \varepsilon\]
+
+    \begin{proof}
+        Нека $f$ е интегруема. Тогава $\underline{I} = \overline{I}$, т.е. $\lim_{\Delta{x} \to 0} s =  \lim_{\Delta{x} \to 0} S$.
+    \end{proof}
+    \begin{proof}
+        Нека $\varepsilon > 0$ и за разбиването $S-s<\varepsilon$.
+        
+        Знаем че $s \leq \underline{I} \leq \overline{I} \leq S$, тогава $\underline{I} - \overline{I} < \varepsilon}$.        По дефиниция,
+        \[\lim_{\Delta x \to 0} \underline{I} = \overline{I}\]
+
+        Тогава $f$ -- интегруема.
+    \end{proof}
+\end{theorem}
+
+\subsection{Дефиниция -- чрез суми на Риман}
+Можем да разгледаме следната дефиниция -- на Риман:
+
+\begin{definition}
+    Нека $f: [a,b] \to \R$ -- ограничена и $\left\{x_i\right\}_0^{n}$ -- разбиване на $[a,b]$.
+
+    Дефинираме:
+    \[\xi_i = \frac{x_{i+1}+x_i}{2},\,\Delta{x_i} = x_{i+1}-x_i\]
+
+    Сума на Риман наричаме сумата:
+    \[\sigma = \sum_{i=0}^n f(\xi_i)\Delta{x_i}\]
+
+    Определен интеграл (в смисъла на Риман) дефинираме като:
+    \[\int_a^b f(x)\,dx = \lim_{\Delta x_i \to 0} \sigma\]
+\end{definition}
+
+\subsection{Еквивалентност на дефинициите}
+
+\section{Свойства}
+
+Определеният интеграл има следните свойства:
+\begin{theorem}
+    \begin{proof}
+
+    \end{proof}
+\end{theorem}

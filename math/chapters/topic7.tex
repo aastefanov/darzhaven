@@ -1,1 +1,26 @@
 % Основни теореми за непрекъснати функции в краен и затворен интервал.
+
+% Болцано-Вайерщрас: всяка ограничена редица има сходяща подредица
+
+Нека $f$ -- непрекъсната в $\left[a,\,b\right]$. Тогава:
+
+\begin{theorem}
+    $f$ е ограничена в $\left[a,\,b\right]$.
+
+    \begin{proof}
+        Да допунем, че $f$ не е ограничена. По теорема на Кантор:
+
+        \begin{enumerate}
+            \item Разделяме $\left[a,\,b\right]$ на три равни части.
+                  В поне един от интервалите $\left[a_1,\,b_1\right]$, $f$ не е ограничена.
+            \item Разделяме $\left[a_1,\,b_1\right]$ на три равни части.
+                  В поне един от интервалите $\left[a_2,\,b_2\right]$, $f$ не е ограничена.
+            \item \dots
+        \end{enumerate}
+        Продължавайки, получаваме редица от вложени интервали $[a_i,b_i] \supset [a_{i+1},b_{i+1}], i \in \N$.
+        Съществува точка $\xi \in [a_n, b_n] \forall n \in N$, тоест:
+
+        За $\xi$, $\forall \varepsilon > 0, \exists \delta > 0: \forall x \in (\xi-\delta, \xi+\delta)$:
+        \[\left|f(x) - f(\xi)\right| < \varepsilon\]
+    \end{proof}
+\end{theorem}
