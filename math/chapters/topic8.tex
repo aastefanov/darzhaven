@@ -1,1 +1,78 @@
 % Редици и редове от реални числа. Абсолютно сходящи редове.
+
+\section{Числови редици}
+
+\begin{definition}
+    Редицата $\{a_n\}_{n=1}^{\infty}$ наричаме сходяща с граница $a$, ако:
+
+    \[\forall\varepsilon>0\,\exists n_0 : \forall n > n_0,\, \abs{a_n-a} < \varepsilon\]
+
+    Означаваме $\lim\limits_{n\to\infty}a_n = a$ или за краткост $\{a_n\}_{n=1}^{\infty} \to \infty$.
+\end{definition}
+
+\begin{theorem}
+    Сходящите числови редици имат следните свойства:
+    \begin{itemize}
+        \item $\lim\limits_{n\to\infty}a_n \pm \lim\limits_{n\to\infty}b_n = \lim\limits_{n\to\infty}\left(a_n\pm b_n\right)$
+        \item $\lim\limits_{n\to\infty}a_n\lim\limits_{n\to\infty}b_n = \lim\limits_{n\to\infty}\left(a_n b_n\right)$
+        \item $\dfrac{\lim\limits_{n\to\infty}a_n}{\lim\limits_{n\to\infty}b_n} = \lim\limits_{n\to\infty}\left(\dfrac{a_n}{b_n}\right)$, ако $\lim\limits_{n\to\infty}b_n \neq 0$
+        \item $\lim\limits_{n\to\infty}a_n \leq \lim\limits_{n\to\infty}b_n$, ако $\forall n,\, a_n \leq b_n$
+    \end{itemize}
+
+    \begin{proof}
+        Нека $a_n \to a$ и $b_n \to b$. Нека $\varepsilon > 0$. Тогава, по дефиниция:
+
+        \[\left|\begin{matrix}
+                \exists & n_1 : & \forall n > n_1, & \abs{a_n-a} & < \varepsilon \\
+                \exists & n_2 : & \forall n > n_2, & \abs{b_n-b} & < \varepsilon
+            \end{matrix}\right.\]
+
+        Разглеждаме $n > \max\left\{n_1,n_2\right\}$.
+
+        \begin{enumerate}
+            \item Събираме неравенствата:
+                  \begin{alignat*}{3}
+                      a-\varepsilon & < a_n & < a+\varepsilon \\
+                      b-\varepsilon & < b_n & < b+\varepsilon
+                  \end{alignat*}
+
+                  \[(a+b)-2\varepsilon < a_n + b_n < (a+b)+2\varepsilon\]
+
+                  Тоест $\forall\varepsilon_1 = \frac{\varepsilon}{2} > 0,\, n > d\max{n_1,n_2}, \abs{a_n+b_n-(a+b)} < \varepsilon_1$.
+
+                  Достигнахме $\lim\limits_{n\to\infty}a_n+\lim\limits_{n\to\infty}b_n = a+b = \lim\limits_{n\to\infty}(a_n+b_n)$.
+
+            \item Събираме неравенствата:
+                  \begin{alignat*}{3}
+                      -\varepsilon & < a_n - a & < \varepsilon \\
+                      -\varepsilon & < b - b_n & < \varepsilon
+                  \end{alignat*}
+
+                  \[\abs{a_n - b_n - (a-b)} < 2\varepsilon\]
+
+                  Получаваме $\lim\limits_{n\to\infty}a_n-\lim\limits_{n\to\infty}b_n = a-b = \lim\limits_{n\to\infty}(a_n-b_n)$.
+
+        \end{enumerate}
+            \item \todo{умножение}
+            \item \todo{деление}
+            \item \todo{неравенство}
+    \end{proof}
+\end{theorem}
+
+\begin{theorem}
+    Ако редицата $\left\{a_n\right\}$ е монотонно растяща и ограничена отгоре, то тя е сходяща. \\
+    Аналогично, редицата е сходяща, когато е монотонно намаляваща и ограничена отдолу.
+    
+    \begin{proof}
+        Нека редицата $\left\{a_n\right\}$ е монотонно растяща и ограничена отгоре.
+        Тогава $a_{n+1} > a_n$ и $a_n < M$, където $M$ е горната граница на редицата.
+
+        Да допуснем, че редицата не е сходяща. Тогава $\exists \varepsilon > 0 : $
+        \todo{недовършено}
+    \end{proof}
+\end{theorem}
+
+\begin{definition}
+    Числов ред наричаме сумата $\sum\limits_{i=1}^\infty a_i = \lim\limits_{n\to\infty}\sum\limits_{i=0}^na_i$. \\
+    Редът е схдоящ, ако редицата $\sum\limits_{i=0}^na_i$ е сходяща.
+\end{definition}

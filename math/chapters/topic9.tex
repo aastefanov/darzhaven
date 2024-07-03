@@ -1,1 +1,87 @@
 % Теорема на Ферма. Теореми за средните стойности (Рол, Лагранж и Коши). Формула на Тейлър.
+
+\section{Локални екстремуми}
+
+\begin{definition}[Локален екстремум]
+    Локални екстремуми са локалните минимуми и максимуми:
+
+    Функцията $f$ има локален максимум в точка $\xi$, ако
+    $\exists \varepsilon > 0:\, \forall x \in(\xi-\varepsilon,\xi+\varepsilon),\,f(x) \leq f(\xi)$.
+
+    Функцията $f$ има локален минимум в точка $\xi$, ако
+    $\exists \varepsilon > 0:\, \forall x \in(\xi-\varepsilon,\xi+\varepsilon),\,f(x) \geq f(\xi)$.
+\end{definition}
+
+\begin{theorem}[Необходимо условие за локален екстремум]
+    Ако $f$ има локален ектремум\\ в точка $\xi$, то или $f$ не е диференцируема в $\xi$, или $f'(x)=0$.
+
+    \begin{proof}
+        Ако не е диференцируема, сме готови. Нека $f$ -- диференцируема в $\xi$. \\
+        Ще разгледаме случая, в който $f(\xi)$ -- локален максимум.
+
+        \begin{alignat*}{3}
+            f_{-}'(\xi) &= \lim_{x\to\xi^-}\frac{f(x)-f(\xi)}{x-\xi} &\geq 0 \\
+            f_{+}'(\xi) &= \lim_{x\to\xi^+}\frac{f(x)-f(\xi)}{x-\xi} &\leq 0
+        \end{alignat*}
+
+        Тогава $f'(\xi) = 0$.
+    \end{proof}
+\end{theorem}
+
+\section{Теореми}
+Нека функцията $f$ е непрекъсната в $[a,b]$ и притежава производна в $(a,b)$.
+
+\begin{theorem}[Теорема на Рол]\label{extr:rolle}
+    Ако $f(a) = f(b)$, то съществува $c \in (a,b)$, такова че $f'(c) = 0$.
+
+    \begin{proof}
+        Ако $f = \operatorname{const}$, то $f'(c) = 0,\,\forall c \in (a,b)$.
+
+        Разглеждаме $f \neq \operatorname{const}$.
+        Знаем, че $f$ достига своите минимум и максимум (по Вайерщрас).
+
+        Нека $A = \min{f(x)} = f(x_A) < B = \max{f(x)} = f(x_B)$.
+
+        Ако $A \neq f(a)$, то $f(x) \geq f(x_A) \forall x \in (a,b)$ и тогава $f'(x_A) = 0$.
+
+        Ако $B \neq f(a)$, то $f(x) \leq f(x_B) \forall x \in (a,b)$ и тогава $f'(x_B) = 0$.
+
+        Тъй като $A < B$, намерихме поне един локален екстремум, в който производната е равна на нула.
+    \end{proof}
+\end{theorem}
+
+\begin{theorem}[Теорема на Лагранж]\label{extr:lagrange}
+    Съществува $c \in (a,b)$, такова че $f(b)-f(a) = f'(c)(b-a)$.
+
+    \begin{proof}
+   %     Ако $f(a) = f(b)$, разглеждаме \autoref{extr:rolle}.
+    Това, което търсим, е аналогично на $f'(c) = \dfrac{f(b)-f(a)}{b-a}$.
+
+    Нека $g(x) = f(x) - \dfrac{f(b)-f(a)}{b-a}(x-a)$.
+
+    Тогава:
+
+    \begin{alignat*}{4}
+        g(a) &= f(a) -  \dfrac{f(b)-f(a)}{b-a}(a-a) &= f(a) - 0 &= f(a) \\
+        g(b) &= f(b) - \dfrac{f(b)-f(a)}{b-a}(b-a) &= f(b) - f(b) + f(a) &= f(a)
+    \end{alignat*}
+
+    Прилагаме \autoref{extr:rolle} за $g$. Съществува $\xi \in (a,\,b): g'(\xi) = 0$.
+
+    \[0 = g'(\xi) = f'(\xi) - \dfrac{f(b)-f(a)}{b-a}\]
+    \[f'(\xi) = \dfrac{f(b)-f(a)}{b-a}\]
+    \end{proof}
+\end{theorem}
+
+\begin{theorem}[Теорема на Коши -- обобщен вид на теоремата на Лагранж]
+    Ако $g : [a,b]\to\R$ -- непрекъсната, диференцируема в (a,b), то съществува $c \in (a,b)$, такова че:
+    \[\frac{f(b)-f(a)}{g(b)-g(a)} = \frac{f'(c)}{g'(c)}\]
+
+    \begin{proof}
+        Разглеждаме $g(a) \neq g(b)$, в противен случай уравнението няма смисъл.
+
+        \todo{довършване}
+    \end{proof}
+\end{theorem}
+
+\section{Формула на Тейлър}

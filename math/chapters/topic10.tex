@@ -33,7 +33,7 @@
 
         За това разбиване сумите на Дарбу са:
         \begin{alignat*}{3}
-            s' & = \sum_{i\neq i_0}m_i\Delta x_i + m_1'(x'-x_{i_0}) + m_2' (x_{i_0+1}-x') & \geq s
+            s' & = \sum_{i\neq i_0}m_i\Delta x_i + m_1'(x'-x_{i_0}) + m_2' (x_{i_0+1}-x') & \geq s \\
             S' & = \sum_{i\neq i_0}M_i\Delta x_i + M_1'(x'-x_{i_0}) + M_2' (x_{i_0+1}-x') & \leq S
         \end{alignat*}
 
@@ -66,7 +66,7 @@
     \end{proof}
     \begin{proof}
         Нека $\varepsilon > 0$ и за разбиването $S-s<\varepsilon$.
-        
+
         Знаем че $s \leq \underline{I} \leq \overline{I} \leq S$, тогава $\underline{I} - \overline{I} < \varepsilon$.
         По дефиниция,
         \[\lim_{\Delta x \to 0} \underline{I} = \overline{I}\]
@@ -91,13 +91,54 @@
     \[\int_a^b f(x)\,dx = \lim_{\Delta x_i \to 0} \sigma\]
 \end{definition}
 
-\subsection{Еквивалентност на дефинициите}
+\subsection{Връзка между дефинициите}
+
+\begin{theorem}\label{int:darburiman}
+    Ако една функция е интегруема в смисъла на Дарбу, то тя е интегруема и в смисъла на Риман.
+
+    \begin{proof}
+        Нека $f$ -- интегруема и $\int\limits_a^b f(x)\,dx = I$. Нека $\{x_i\}$ -- разбиване.
+
+        Тогава $\lim\limits_{\Delta{x_i}\to0} s = I = \lim\limits_{\Delta{x_i}\to0} S$.
+
+        \begin{alignat*}{3}
+            s        & = \sum m_i \Delta{x_i}      & ,\,\, m_i = \inf_{x\in [x_i,x_{i+1}]} f(x) \\
+            \sigma = & = \sum f(\xi_i) \Delta{x_i} & ,\,\, \xi_i in [x_i,x_{i+1}]               \\
+            S        & = \sum M_i \Delta{x_i}      & ,\,\, M_i = \sup_{x\in [x_i,x_{i+1}]} f(x)
+        \end{alignat*}
+
+        Но $m_i \leq f(\xi) \leq M_i$, т.е. $s \leq \sigma \leq S$.
+        При граничен преход:
+        \[I \leq \lim_{\Delta x_i \to 0} \sigma \leq I\]
+
+        Функцията е интегруема в смисъл на Риман, като:
+        \[\int\limits_a^b f(x)\,dx = I\]
+    \end{proof}
+\end{theorem}
+
+\begin{theorem}
+    Функция $f$ е интегруема по Риман тогава и само тогава, когато $\forall{\varepsilon > 0},\, S-s\leq\varepsilon$.
+
+    \begin{proof}
+        Нека $\varepsilon > 0$ и $S-s<\varepsilon$. Тогава, по дефиниция, $\lim\limits_{\Delta{x}\to0}(S-s)=0$.
+
+        Тогава $\lim S = \lim s$ и от \autoref{int:darburiman}, функцията е интегруема в смисъл на Риман.
+    \end{proof}
+    \begin{proof}
+        \todo{обратното -- май съвсем не сме го писали}
+    \end{proof}
+\end{theorem}
 
 \section{Свойства}
 
 Определеният интеграл има следните свойства:
-\begin{theorem}
-    \begin{proof}
+\begin{enumerate}
+    \item е линейна функция:
+          \[\int_a^b \lambda f(x) \pm \mu g(x) \,dx = \lambda \int_a^b f(x) \,dx \pm \mu \int_a^b g(x)\,dx\]
+    \item е равен на нула върху интервал с дължина нула:
+          \[\int_a^a f(x)\,dx = 0\]
+    \item се съгласува с операцията абсолютна стойност по следния начин:
+          \[\abs{\int_a^b f(x)\,dx} \leq \int_a^b \abs{f(x)}\,dx\]
+\end{enumerate}
 
-    \end{proof}
-\end{theorem}
+\todo{още неща има тук...}
